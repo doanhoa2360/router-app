@@ -1,11 +1,22 @@
+
 <template>
-  <h1>Home page</h1>
+  
+  <p>Home</p>
+  <button @click="goHome2">Go Home 2</button>
+  <router-link to='/item1'><p>Go Item</p> </router-link>
+  <router-link to='/item2'><p>Go Item 2</p> </router-link>
+   <router-view/>
 </template>
 
-<script>
-export default {
-name: 'Home'
+<script >
+export default{
+  methods: {
+   goHome2(){
+  this.$router.push('/1')
 }
+  },
+}
+
 </script>
 
 <style>
