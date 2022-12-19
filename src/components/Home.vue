@@ -6,7 +6,7 @@
     </div>
     <nav>
       <button @click="filter = 'all'">All Task</button>
-      <button @click="filter = 'favs'">Fav Task</button>
+      <button @click="filter = 'favs'">Completed Task</button>
     </nav>
     <div class="task-list" v-if="filter === 'all'">
       <p>You have {{ counter.totalCount }} tasks</p>

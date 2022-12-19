@@ -6,7 +6,7 @@
     <button @click="taskStore.deleteTask(task.id)">Delete</button>
     <button class="like" 
     :class="{active: task.isFav}"
-    @click="taskStore.toggleFav(task.id)">OK</button>
+    @click="taskStore.toggleFav(task.id)">Complete Task</button>
 </div>
   </div>
 </template>
