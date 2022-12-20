@@ -37,8 +37,9 @@ setup() {
   background-color: rgb(228, 224, 224);
 }
 .item{
-  
-    width: 60%;
+  display: inherit;
+  padding-left: 20%;
+    width: 40%;
 
 }
 </style>

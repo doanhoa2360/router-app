@@ -2,8 +2,8 @@ import { defineStore } from 'pinia'
 export const useCounterStore = defineStore('counter', {
     state: () => ({
         tasks: [
-              ],
-              
+        ],
+
 
     }),
     getters: {
@@ -20,12 +20,12 @@ export const useCounterStore = defineStore('counter', {
         }
     },
     actions: {
-        async getTask(){
-const res =await fetch('http://localhost:3000/tasks')
-const data = await res.json()
-this.tasks = data
-        }  ,
-              addTask(task) {
+        async getTask() {
+            const res = await fetch('http://localhost:3000/tasks')
+            const data = await res.json()
+            this.tasks = data
+        },
+        addTask(task) {
             this.tasks.push(task)
         },
         deleteTask(id) {
@@ -34,8 +34,8 @@ this.tasks = data
             })
         },
         toggleFav(id) {
-const task = this.tasks.find(t=>t.id === id)
-task.isFav= !task.isFav
+            const task = this.tasks.find(t => t.id === id)
+            task.isFav = !task.isFav
         }
     }
 })
